@@ -15,8 +15,8 @@ struct ContentView: View {
         return HStack {
             
         // combine multiple view
-            ForEach(0..<3) { index in
-                CardView()
+            ForEach(0..<4) { index in
+                CardView(isFaceUp: true)
             }
         }
             .padding()
@@ -28,7 +28,7 @@ struct ContentView: View {
 // make the combine view of one stack to a spcific struct
 struct CardView: View {
     // make a condition for FaceUp and FaceDown
-    var isFaceUp: Bool = false
+    var isFaceUp: Bool
     
     var body: some View {
         
